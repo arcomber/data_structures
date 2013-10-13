@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+/* 
+demonstrates the extra memory handling overhead of strings
+*/
+
 
 typedef char* stackdata;
 
@@ -59,6 +63,7 @@ void get_data(stack s) {
 	   if(strncmp(data, "quit", 4) == 0)
 		   break;
 
+           /* TODO - trim string */
 	   push(s, data);	   
    }
 }
